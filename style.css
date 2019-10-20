@@ -254,7 +254,7 @@ label {
   margin-top: -11px;
 }
 
-.generate-btn {
+.btn {
   width: 150px;
   height: 50px;
   background-color: #fff;
@@ -262,13 +262,22 @@ label {
   cursor: pointer;
   font-size: 15px;
   transition: .15s;
-  margin-top: 20px;
 }
 
-.generate-btn:hover, .generate-btn:focus {
+.btn:hover, .btn:focus {
   outline: none;
   background-color: #2965f1;
   color: #ffffff;
+}
+
+.btn--hide:hover, .btn--hide:focus {
+  background: #e43939;
+}
+
+.btn-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 800px) {
@@ -280,6 +289,9 @@ label {
     box-sizing: border-box;
     height: 60vw;
     margin: 0 0 20px 0;
+  }
+  .output {
+    margin-bottom: 20px;
   }
 }
 

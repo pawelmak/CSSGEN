@@ -260,8 +260,7 @@ label {
   }
 }
 
-
-.generate-btn {
+.btn {
   width: 150px;
   height: 50px;
   background-color: #fff;
@@ -269,13 +268,25 @@ label {
   cursor: pointer;
   font-size: 15px;
   transition: .15s;
-  margin-top: 20px;
-
+  
   &:hover,
   &:focus {
     outline: none;
     background-color: $blue;
     color: #ffffff;
+  }
+
+  &--hide {
+    &:hover,
+    &:focus {
+      background: rgb(228, 57, 57);
+    }
+  }
+  
+  &-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -292,6 +303,10 @@ label {
       margin: 0 0 20px 0;
     }
   } 
+
+  .output {
+    margin-bottom: 20px;
+  }
 }
 
 @media(max-width: 551px) {

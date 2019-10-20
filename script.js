@@ -1,5 +1,5 @@
 const preview = document.querySelector('.preview');
-const body = document.querySelector('body');
+const output = document.querySelector('.output');
 
 //element values
 
@@ -121,8 +121,7 @@ function checkColor(el) {
   el.value = '#' + arr.join('');
 }
 
-function output() {
-  const output = document.querySelector('.output');
+function generateOutput() {
   output.classList.add('active');
   output.innerText = `.element-class {
   width: ${values.width}px;
@@ -148,8 +147,13 @@ function output() {
 }`;
 }
 
-const btn = document.querySelector('.generate-btn');
-btn.addEventListener('click', output);
+const genBtn = document.querySelector('.btn--generate');
+genBtn.addEventListener('click', generateOutput);
+
+const hideBtn = document.querySelector('.btn--hide');
+hideBtn.addEventListener('click', () => {
+  output.classList.remove('active');
+});
 
 const inputContainer = document.querySelector('.input-container');
 
