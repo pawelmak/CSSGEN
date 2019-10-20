@@ -270,6 +270,10 @@ label {
   color: #ffffff;
 }
 
+.btn--hide {
+  margin-left: 5px;
+}
+
 .btn--hide:hover, .btn--hide:focus {
   background: #e43939;
 }
@@ -277,7 +281,7 @@ label {
 .btn-container {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 800px) {

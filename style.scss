@@ -277,6 +277,8 @@ label {
   }
 
   &--hide {
+    margin-left: 5px;
+
     &:hover,
     &:focus {
       background: rgb(228, 57, 57);
@@ -286,7 +288,7 @@ label {
   &-container {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 
