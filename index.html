@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML and CSS generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="preview-container">
+    <div class="info">preview:</div>
+    <div class="preview">
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="logo"><span class="hl">CSS</span> generator</h1>
+    <form action="" class="input-container">
+      <label for="top-left-radius">
+        Top-left radius:
+        <div>
+          <input type="range" value="0" min="0" max="100" class="range top-left" id="top-left-radius">
+          <input type="number" value="0" min="0" max="100" class="input input--num" id="top-left-num">%
+        </div>
+      </label>
+      <label for="top-right-radius">
+        Top-right radius:
+        <div>
+          <input type="range" value="0" min="0" max="100" class="range top-right" id="top-right-radius">
+          <input type="number" value="0" min="0" max="100" class="input input--num" id="top-right-num">%
+        </div>
+      </label>
+      <label for="bottom-right-radius">
+        Bottom-right radius:
+        <div>
+          <input type="range" value="0" min="0" max="100" class="range bottom-right" id="bottom-right-radius">
+          <input type="number" value="0" min="0" max="100" class="input input--num" id="bottom-right-num">%
+        </div>
+      </label>
+      <label for="bottom-left-radius">
+        Bottom-left radius:
+        <div>
+          <input type="range" value="0" min="0" max="100" class="range bottom-left" id="bottom-left-radius">
+          <input type="number" value="0" min="0" max="100" class="input input--num" id="bottom-left-num">%
+        </div>
+      </label>
+      <div class="group-input-container">
+        <label for="border-top">
+          Border top:
+          <input type="number" min="0" value="0" class="input input--border input--num" id="border-top">
+        </label>
+        <label for="border-right">
+          right:
+          <input type="number" min="0" value="0" class="input input--border input--num" id="border-right">
+        </label>
+        <label for="border-bottom">
+          bottom:
+          <input type="number" min="0" value="0" class="input input--border input--num" id="border-bottom">
+        </label>
+        <label for="border-left">
+          left:
+          <input type="number" min="0" value="0" class="input input--border input--num" id="border-left">px
+        </label>
+      </div>
+      <label for="border-style">
+        Border style: 
+        <select id="border-style" class="border-style">
+          <option value="solid">solid</option>
+          <option value="double">double</option>
+          <option value="dashed">dashed</option>
+          <option value="dotted">dotted</option>
+          <option value="ridge">ridge</option>
+          <option value="groove">groove</option>
+          <option value="inset">inset</option>
+          <option value="outset">outset</option>
+        </select>
+      </label>
+      <div class="group-input-container">
+        <label for="width-input">
+          Element width:
+          <input type="number" value="100" min="1" class="input input--width input--num" id="width-input">
+        </label>
+        <label for="height-input">
+          height:
+          <input type="number" value="100" min="1" class="input input--height input--num" id="height-input">
+          px  
+        </label>
+      </div>
+      <label for="bg-color">
+        Background color:
+        <input type="color" value="#dddddd" class="color" id="bg-color"> 
+        <input type="text" maxlength="7" value="#dddddd" class="input input--hex" id="hex-bg">
+      </label>
+      <label for="border-color">
+        Border color:
+        <input type="color" value="#3a3a3a" class="color" id="border-color">
+        <input type="text" maxlength="7" value="#3a3a3a" class="input input--hex hex-border" id="hex-border">
+      </label>
+      <label for="rotate-range">
+        Rotate:
+        <input type="range" value="0" min="0" max="360" class="rotate range rotate-range" id="rotate-range">
+        <input type="number" value="0" min="0" max="360" class="input input--num" id="rotate-num">&deg;
+      </label>
+      <button type="button" class="generate-btn">Generate CSS code</button>
+    </form>
+    <code class="output"></code>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
