@@ -25,24 +25,20 @@ function rangeInput(e, el) {
     if(el.classList.contains('top-left')) {
       preview.style.borderTopLeftRadius = `${el.value}%`;
       values.topLeftRadius = el.value;
-      el.nextSibling.nextSibling.value = el.value;
     } else if(el.classList.contains('top-right')) {
       preview.style.borderTopRightRadius = `${el.value}%`;
       values.topRightRadius = el.value;
-      el.nextSibling.nextSibling.value = el.value;
     } else if(el.classList.contains('bottom-right')) {
       preview.style.borderBottomRightRadius = `${el.value}%`;
       values.bottomRightRadius = el.value;
-      el.nextSibling.nextSibling.value = el.value;
     } else if(el.classList.contains('bottom-left')) {
       preview.style.borderBottomLeftRadius = `${el.value}%`;
       values.bottomLeftRadius = el.value;
-      el.nextSibling.nextSibling.value = el.value;
     } else if(el.classList.contains('rotate')) {
       preview.style.transform = `rotate(${el.value}deg)`;
-      el.nextSibling.nextSibling.value = el.value;
       values.rotate = el.value;
-    }  
+    } 
+    el.nextSibling.nextSibling.value = el.value;
   }));
 }
 
